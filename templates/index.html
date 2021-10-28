@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        document.getElementsByTagName("html")[0].className += " js";
+    </script>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/assets/css/style.css">
+    <link rel="stylesheet" href="static/assets/css/custom.css">
+    <title>RennyDev - Timetable</title>
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon" />
+</head>
+<body class="dark-body">
+    <header class="cd-main-header text-center flex flex-column flex-center">
+        <!-- <p class="margin-top-md margin-bottom-xl">
+                    👈 <a class="cd-article-link" href="https://codyhouse.co/gem/schedule-template">Article &amp; Download</a>
+                </p> -->
+
+        <h1 class="text-xl" style="color:white">Civil 3<sup>rd</sup> Year Timetable</h1>
+    </header>
+
+    <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
+        <div class="cd-schedule__timeline">
+            <ul>
+                <li><span>07:00</span></li>
+                <li><span>08:00</span></li>
+                <li><span>09:00</span></li>
+                <li><span>10:00</span></li>
+                <li><span>11:00</span></li>
+                <li><span>12:00</span></li>
+                <li><span>13:00</span></li>
+                <li><span>14:00</span></li>
+                <li><span>15:00</span></li>
+                <li><span>16:00</span></li>
+                <li><span>17:00</span></li>
+                <li><span>18:00</span></li>
+                <li><span>19:00</span></li>
+                <li><span>20:00</span></li>
+            </ul>
+        </div>
+        <!-- .cd-schedule__timeline -->
+
+        <div class="cd-schedule__events">
+            <ul>
+                {% for day in days %}
+                <li class="cd-schedule__group">
+                    <div class="cd-schedule__top-info">
+                        <span>{{ day.title }}</span>
+                    </div>
+
+                    <ul>
+                        {% for s in day.get_sessions  %}
+                        <li class="cd-schedule__event">
+                            <a data-start="{{ s.start|date:'H:i' }}" data-end="{{ s.end|date:'H:i' }}" data-content="static/details/{{s.course}}.html" data-event="event-{{ s.course.id }}" href="#0">
+                                <em class="cd-schedule__name">{{ s.course }}</em>
+                                <em class="cd-schedule__name">{{ s.session_type }}</em>
+                                <em class="cd-schedule__name">{{ s.venue }}</em>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="cd-schedule-modal">
+            <header class="cd-schedule-modal__header">
+                <div class="cd-schedule-modal__content">
+                    <span class="cd-schedule-modal__date"></span>
+                    <h3 class="cd-schedule-modal__name"></h3>
+                </div>
+
+                <div class="cd-schedule-modal__header-bg"></div>
+            </header>
+
+            <div class="cd-schedule-modal__body">
+                <div class="cd-schedule-modal__event-info"></div>
+                <div class="cd-schedule-modal__body-bg"></div>
+            </div>
+
+            <a href="#0" class="cd-schedule-modal__close text-replace">Close</a>
+        </div>
+
+        <div class="cd-schedule__cover-layer"></div>
+    </div>
+    <!-- .cd-schedule -->
+
+    <script src="static/assets/js/util.js"></script>
+    <!-- util functions included in the CodyHouse framework -->
+    <script src="static/assets/js/main.js"></script>
+</body>
+</html>

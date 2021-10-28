@@ -1,0 +1,50 @@
+.dark-body {
+    background: url('../../img/bg-2.jpg');
+    background-size: 100%;
+    color: white;
+}
+
+.over {
+    background-color: rgb(17,9,34);
+}
+
+
+.cd-schedule__event [data-event="event-1"],.cd-schedule-modal[data-event="event-1"] .cd-schedule-modal__header-bg {
+    background-color: hsla(0,0%,0%,0.508);
+}
+
+.cd-schedule__event [data-event="event-2"],.cd-schedule-modal[data-event="event-2"] .cd-schedule-modal__header-bg {
+    background-color: hsla(33,100%,10%,0.5);
+}
+
+.cd-schedule__event [data-event="event-3"],.cd-schedule-modal[data-event="event-3"] .cd-schedule-modal__header-bg {
+    background-color: hsla(62,100%,10%,0.5);
+}
+
+.cd-schedule__event [data-event="event-4"],.cd-schedule-modal[data-event="event-4"] .cd-schedule-modal__header-bg {
+    background-color: hsla(108,100%,10%, 0.5);
+}
+
+.cd-schedule__event [data-event="event-5"],.cd-schedule-modal[data-event="event-5"] .cd-schedule-modal__header-bg {
+    background-color: hsla(177,100%,10%,0.5);
+}
+
+.cd-schedule__event [data-event="event-6"],.cd-schedule-modal[data-event="event-6"] .cd-schedule-modal__header-bg {
+    background-color: hsla(222,100%,10%,0.5);
+}
+
+.cd-schedule__event [data-event="event-7"],.cd-schedule-modal[data-event="event-7"] .cd-schedule-modal__header-bg {
+    background-color: hsla(270,100%,10%,0.552);
+}
+
+.cd-schedule__event [data-event="event-8"],.cd-schedule-modal[data-event="event-8"] .cd-schedule-modal__header-bg {
+    background-color: hsla(315,100%,10%,0.472);
+}
+
+.cd-schedule__event [data-event="event-9"],.cd-schedule-modal[data-event="event-9"] .cd-schedule-modal__header-bg {
+    background-color: red;
+}
+
+.cd-schedule__event [data-event="event-10"],.cd-schedule-modal[data-event="event-10"] .cd-schedule-modal__header-bg {
+}
+
